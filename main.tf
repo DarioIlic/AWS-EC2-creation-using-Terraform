@@ -8,7 +8,7 @@ resource "aws_security_group" "aws-vm-sg" {
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["178.216.60.90/32", "89.172.234.6/32"]
-    description = "Allow incoming HTTP connections"
+    description = "Allow incoming HTTPS connections"
   }
   egress {
     from_port   = 0
