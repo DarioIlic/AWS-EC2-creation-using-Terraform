@@ -8,7 +8,7 @@ resource "aws_security_group" "aws-vm-sg" {
    to_port     = 80
    protocol    = "tcp"
    cidr_blocks = ["178.216.60.90/32", "89.172.234.6/32"]
-   description = "Allow incoming HTTPS connections"
+   description = "Allow incoming HTTP connections"
   }
   ingress {
     from_port   = 443
