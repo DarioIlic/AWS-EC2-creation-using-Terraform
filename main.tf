@@ -1,20 +1,27 @@
 # Define the security group for the EC2 Instance
 resource "aws_security_group" "aws-vm-sg" {
-  name        = "dhimahi-aws-terraform-sg"
+  name        = "aws-terraform-sg"
   description = "Allow incoming connections"
   vpc_id      = aws_vpc.vpc.id  
-   ingress {
-   from_port   = 80
-   to_port     = 80
-   protocol    = "tcp"
-   cidr_blocks = ["178.216.60.90/32", "89.172.234.6/32"]
-   description = "Allow incoming HTTP connections"
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["93.141.139.28/32"]
+    description = "Allow incoming HTTPS connections"
   }
   ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["93.141.139.28/32"]
+    description = "Allow incoming HTTP connections"
+  }
+    ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["178.216.60.90/32", "89.172.234.6/32"]
+    cidr_blocks = ["93.141.139.28/32"]
     description = "Allow incoming HTTPS connections"
   }
   egress {
@@ -45,6 +52,6 @@ resource "aws_instance" "vm-server" {
   }
   
   tags = {
-    Name = "Dhimahi-aws-terraform"
+    Name = "AWS-Terraform"
   }
 }
