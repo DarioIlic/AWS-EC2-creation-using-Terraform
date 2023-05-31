@@ -7,21 +7,21 @@ resource "aws_security_group" "aws-vm-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["93.141.139.28/32"]
-    description = "Allow incoming HTTPS connections"
+    cidr_blocks = ["IP/s"]
+    description = "Allow incoming SSH connections"
   }
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["93.141.139.28/32"]
+    cidr_blocks = ["IP/s"]
     description = "Allow incoming HTTP connections"
   }
     ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["93.141.139.28/32"]
+    cidr_blocks = ["IP/s"]
     description = "Allow incoming HTTPS connections"
   }
   egress {
