@@ -1,4 +1,4 @@
-# AWS-EC2
+# AWS EC2 creation using Terraform
  Create AWS EC2 instance using Terraform
 
 Requirements:
