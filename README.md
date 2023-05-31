@@ -1,5 +1,5 @@
-# AWS EC2 creation using Terraform
- Create AWS EC2 instance using Terraform
+# AWS EC2 creation using Terraform and install WordPress
+ Create AWS EC2 instance using Terraform and install WordPress
 
 Requirements:
  - AWS account (free tier, you only need to have enough for verification that will be returned ~$1)
@@ -13,5 +13,5 @@ All the rest is done in the configuration files:
  - Create OS Version Variables
  - Create a Security Group
  - Create the EC2 Instance (Virtual Machine)
- 
-To note, this code can be changed to deploy other OS as well, Windows, Debian, Amazon Linux, CentOS, etc. I simply chose Ubuntu. You can also add additional ports to access, adapt the script to install and deploy MySQL, PHP, Nginx, OpenLiteSpeed, etc.
+ - Install Apache, PHP and MySQL
+ - Download and extract WordPress
